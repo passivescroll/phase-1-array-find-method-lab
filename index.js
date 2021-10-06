@@ -1,32 +1,7 @@
 
-function superbowlWin(recordList) {
-    const win = recordList.find(record => {
-        return record.result === 'W' 
-     
-    }); 
-    if (win == undefined) {
-        return undefined 
-    }
-    return win.year;
-    
-}
 
-
-
-
-
-/*
-
-If win = undefined 
-
-
-
-
-compare w to something in object. 
-
-access key in object 
-
-
-what
-
-*/
+   
+superbowlWin = (record) => {
+    const result = record.find( record => record.result === "W" );
+    return !!result ? result.year : undefined;
+  }
